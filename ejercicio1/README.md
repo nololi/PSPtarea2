@@ -16,7 +16,8 @@ Linux:
 ```mv origen/Productor.jar destino/Productor.jar```  
 
 ## Ejemplo de generación de los jar
-Haciendo click sobre el main, seleccionar Export - Runnable JAR file - Finish
+Haciendo click sobre la clase a exportar, seleccionar Export - Runnable JAR file - Finish.  
+Repetir para todas las clases.
 
 ![export](../4.png)  
 ![RunnableJarFile](../5.png)  
