@@ -6,14 +6,14 @@ Aplicación que genera un hilo consumidor y otro productor
 Windows:
 
 ```MOVE origen\AlmacenCaracteres.jar destino\AlmacenCaracteres.jar```  
-```MOVE origen\Consumidor.jar destino Consumidor.jar``` 
-```MOVE origen\Productor.jar destino Productor.jar```
+```MOVE origen\Consumidor.jar destino Consumidor.jar```  
+```MOVE origen\Productor.jar destino Productor.jar```  
 
 Linux:
 
-```mv origen/AlmacenCaracteres.jar destino/AlmacenCaracteres.jar```
+```mv origen/AlmacenCaracteres.jar destino/AlmacenCaracteres.jar```  
 ```mv origen/Consumidor.jar destino/Consumidor.jar``` 
-```mv origen/Productor.jar destino/Productor.jar```
+```mv origen/Productor.jar destino/Productor.jar```  
 
 ## Ejemplo de generación de los jar
 Haciendo click sobre el main, seleccionar Export - Runnable JAR file - Finish
