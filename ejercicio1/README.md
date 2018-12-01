@@ -1,5 +1,5 @@
 # Generar de forma aleatoria
-Aplicación que genera un hilo consumidor y otro productor
+Aplicación que genera un hilo consumidor y otro productor  
 ![Storage](../2.png)
 ## Instalación 
 
@@ -12,7 +12,7 @@ Windows:
 Linux:
 
 ```mv origen/AlmacenCaracteres.jar destino/AlmacenCaracteres.jar```  
-```mv origen/Consumidor.jar destino/Consumidor.jar``` 
+```mv origen/Consumidor.jar destino/Consumidor.jar```  
 ```mv origen/Productor.jar destino/Productor.jar```  
 
 ## Ejemplo de generación de los jar
