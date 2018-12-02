@@ -12,7 +12,15 @@ public class Productor extends Thread {
 	
 	@Override
     public void run() {
+		int contador=0;
         for (int i = 0; i < almacenCaracteres.getTamanoLista(); i++) {
+        	if(contador%6==0) {//si el tamaño es 6
+        		try {
+					sleep(1000);
+				} catch (InterruptedException e) {					
+				}
+        	}
+        	contador++;
             almacenCaracteres.agregarLetra(); //agrego la letra
             yield(); //que java elija otro hilo al azar
         } 

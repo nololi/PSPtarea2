@@ -11,15 +11,11 @@ public class AlmacenCaracteres {
 	// recurso compartido  a través del objeto: letras del buffer
 	private Stack<Character> datosBuffer = new Stack<Character>();
 	private int tamanoLista = 15;
-	private int contadorActual = 0;
+//	private int contadorActual = 0;
 
 	public int getTamanoLista() {
 		return tamanoLista;
-	}
-
-	public void setTamanoLista(int tamanoNuevo) {
-		this.tamanoLista = tamanoNuevo;
-	}
+	}	
 
 	public List<Character> getDatosBuffer() {
 		return this.datosBuffer;
@@ -27,14 +23,14 @@ public class AlmacenCaracteres {
 
 	// Añadir letras
 	public synchronized void agregarLetra() {
-		while (contadorActual == tamanoLista) {// mientras tenga el buffer lleno espero
-			try {
-				this.wait();// el hilo invoca wait() y se pone en la cola de espera wait del objeto
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
-		}
-		contadorActual++;
+//		while (contadorActual == tamanoLista) {// mientras tenga el buffer lleno espero
+//			try {
+//				this.wait();// el hilo invoca wait() y se pone en la cola de espera wait del objeto
+//			} catch (InterruptedException e) {
+//				e.printStackTrace();
+//			}
+//		}
+//		contadorActual++;
 
 		// agrego valor
 		char valor = (char) (Math.random() * 25 + 65);
@@ -48,13 +44,11 @@ public class AlmacenCaracteres {
 	 * Método que retira las letras de la pila
 	 */
 	public synchronized void sacar() {
-		try {
-			while (contadorActual == 0) {
-				this.wait();
+		if(datosBuffer.size()==0) {
+			try {
+				wait();
+			} catch (InterruptedException e) {				
 			}
-		} catch (InterruptedException e) {
-			System.out.println(e.getMessage());
-			e.printStackTrace();
 		}
 
 		/*
@@ -62,7 +56,6 @@ public class AlmacenCaracteres {
 		 * valores del buffer
 		 */
 		char valor = datosBuffer.pop(); // la pila ya quita el último valor introducido
-		contadorActual--;
 		System.out.println("Recogido el carácter " + valor + " del buffer");
 		this.notifyAll();
 

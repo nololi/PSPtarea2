@@ -15,9 +15,7 @@ public class Consumidor extends Thread {
 			almacenCaracteres.sacar();
 			 yield(); //que java elija otro hilo al azar
 		}
-		if(almacenCaracteres.getDatosBuffer().size()==6) {
-			almacenCaracteres.setTamanoLista(6);
-		}
+		
 		
 
 	}
