@@ -1,5 +1,5 @@
 # Generar de forma aleatoria
-Aplicación que instancia 5 filósofos que piensan y comen aleatoriamente 
+Aplicación que instancia 5 filósofos que piensan y comen aleatoriamente   
 ![Storage](../12.jpg)
 ## Instalación 
 
